@@ -91,26 +91,57 @@
 // }
 
 
-#include <iostream>
+// #include <iostream>
+// using namespace std;
+
+// int main(){
+// 	int n;
+// 	cin>>n;
+// 	int a=5;
+// 	int d=2;
+// 	int an=0;
+// 	int sn=0;
+// 	an=a+(n-1)*d;
+// 	for(int i=1;i<=n;i++){
+		
+
+
+// 	}
+
+// 	return 0;
+// }
+
+
+// #include<iostream>
+// using namespace std;
+
+// int main(){
+// 	int    a=4;
+// 	while(a<10 && a>5){
+// 		cout<<"Hi\n";
+// 		a++;
+// 	}
+
+// 	return 0; 
+// }
+
+
+
+#include<iostream>
 using namespace std;
 
 int main(){
 	int n;
-	cin>>n;
-	int a=5;
-	int d=2;
-	int an=0;
-	int sn=0;
-	an=a+(n-1)*d;
-	for(int i=1;i<=n;i++){
+	 cin>>n;
 
-		
-	}
+	if(n%2==0){
+		cout<<"Even ";
+	} 
+	else
+		cout<<"Odd ";
 
 	return 0;
 }
-
-
 
 
 
