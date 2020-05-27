@@ -1,0 +1,39 @@
+https://ide.codingblocks.com/s/243498
+#include <iostream>
+#include<climits>
+using namespace std;
+
+//n->n/3, n/2, n-1
+int minSteps(int n,int dp[])        //TopDown Approach
+{   
+    if(n==1){
+        return 0;
+    }
+
+    if(dp[n]!=0){
+        return dp[n];           //Lookup
+    }
+    int optn1,optn2,optn3;
+    optn1=optn2=optn3=INT_MAX;
+    if(n%3 ==0){
+        optn1=minSteps(n/3,dp)+1;
+    }
+    if(n%2 ==0){
+        optn2=minSteps(n/2,dp)+1;
+    }
+    optn3=minSteps(n-1,dp)+1;
+
+    int ans=min(min(optn1,optn2),optn3);
+
+    return dp[n]=ans;
+}
+
+int main()
+{
+    int dp[100]={0};
+    int n;
+    cin>>n;
+    cout<<minSteps(n,dp);
+
+    return 0;
+}
